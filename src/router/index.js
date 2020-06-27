@@ -9,8 +9,7 @@ import Order from '../pages/order.vue'
 import OrderList from '../pages/orderList.vue'
 import OrderConfirm from '../pages/orderConfirm.vue'
 import OrderPay from '../pages/orderPay.vue'
-// eslint-disable-next-line no-unused-vars
-// import AliPay from '../pages/alipay.vue'
+import Alipay from '../pages/alipay.vue'
 
 Vue.use(VueRouter) // 加载插件的固定语法
 
@@ -62,12 +61,12 @@ const routes = [ // 配置一些子路由
         path: 'pay', // 动态定义路由的方式
         name: 'order-pay',
         component: OrderPay
+      },
+      {
+        path: 'alipay', // 动态定义路由的方式
+        name: 'alipay',
+        component: Alipay
       }
-      // {
-      //   path: 'alipay', // 动态定义路由的方式
-      //   name: 'alipay',
-      //   component: Alipay
-      // }
     ]
   }
   // {
