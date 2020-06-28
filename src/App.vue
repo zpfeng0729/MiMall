@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view></router-view>
   </div>
 </template>
 <script>
@@ -16,15 +12,19 @@ export default {
   },
   data() {
     return {
-
+      res: {}
     }
   },
   mounted() {
-    //storage.setItem('a', 1)
-    //storage.setItem('user', {a: 1})
-    //storage.setItem('abc', {a: 1}, 'user')
-    //storage.clear('a')
-    storage.clear('a', 'user')
+    // storage.setItem('a', 1)
+    // storage.setItem('user', {a: 1})
+    // storage.setItem('abc', {a: 1}, 'user')
+    // storage.clear('a')
+    // storage.clear('a', 'user')
+    // 第一种：本地加载请求静态json文件的形式
+    this.axios.get('mock/user/login.json').then((res) => {
+      this.res = res;
+    })
   }
 }
 </script>
