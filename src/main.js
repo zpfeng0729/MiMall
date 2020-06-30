@@ -7,7 +7,7 @@ import App from './App.vue'
 //import env from './env'
 
 // mock开关
-const mock = true;
+const mock = false;
 if (mock) {
   // import和require的区别：import是预编译加载，编译的时候文件就会加载进来写入内存当中，而require不会，从上到下执行的时候才会去加载
   require('./mock/api');
