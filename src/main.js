@@ -3,6 +3,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios' // 帮助我们把axios对象挂载到Vue实例上面
 import router from './router'
 import store from './store'
+import VueLazyLoad from 'vue-lazyload'
 import App from './App.vue'
 //import env from './env'
 
@@ -35,6 +36,9 @@ axios.interceptors.response.use(function(response) {
 
 // 加载插件
 Vue.use(VueAxios, axios); // 把实例挂载上去
+Vue.use(VueLazyLoad, {
+  loading: '/imgs/loading-svg/loading-bubbles.svg'
+})
 Vue.config.productionTip = false // productionTip是生产环境下的提示信息
 
 new Vue({

@@ -34,7 +34,7 @@
                   <!-- 一旦用了指令里面就是js变量，如果想要字符串则需添加单引号 -->
                   <a v-bind:href="'/#/product/' + item.id" target="_blank">
                     <div calss="pro-img">
-                      <img :src="item.mainImage" :alt="item.subtitle" />
+                      <img v-lazy="item.mainImage" :alt="item.subtitle" />
                     </div>
                     <div calss="pro-name">{{item.name}}</div>
                     <!-- 这里对价格进行了过滤 -->
@@ -55,7 +55,7 @@
                 <li class="product">
                   <a href target="_blank">
                     <div calss="pro-img">
-                      <img src="/imgs/nav-img/nav-3-1.jpg" alt />
+                      <img v-lazy="'/imgs/nav-img/nav-3-1.jpg'" alt />
                     </div>
                     <div calss="pro-name">小米壁画电视 65英寸</div>
                     <div calss="pro-price">6999元</div>
@@ -64,7 +64,16 @@
                 <li class="product">
                   <a href target="_blank">
                     <div calss="pro-img">
-                      <img src="/imgs/nav-img/nav-3-2.jpg" alt />
+                      <img v-lazy="'/imgs/nav-img/nav-3-2.jpg'" alt />
+                    </div>
+                    <div calss="pro-name">小米全面屏电视E55A</div>
+                    <div calss="pro-price">1999元</div>
+                  </a>
+                </li>
+                <li class="product">
+                  <a href target="_blank">
+                    <div calss="pro-img">
+                      <img v-lazy="'/imgs/nav-img/nav-3-3.png'" alt />
                     </div>
                     <div calss="pro-name">小米电视4A 32英寸</div>
                     <div calss="pro-price">699元</div>
@@ -73,37 +82,28 @@
                 <li class="product">
                   <a href target="_blank">
                     <div calss="pro-img">
-                      <img src="/imgs/nav-img/nav-3-3.png" alt />
+                      <img v-lazy="'/imgs/nav-img/nav-3-4.jpg'" alt />
                     </div>
-                    <div calss="pro-name">小米电视4A 32英寸</div>
-                    <div calss="pro-price">699元</div>
+                    <div calss="pro-name">小米电视4A 55英寸</div>
+                    <div calss="pro-price">1799元</div>
                   </a>
                 </li>
                 <li class="product">
                   <a href target="_blank">
                     <div calss="pro-img">
-                      <img src="/imgs/nav-img/nav-3-4.jpg" alt />
+                      <img v-lazy="'/imgs/nav-img/nav-3-5.jpg'" alt />
+                    </div>
+                    <div calss="pro-name">小米电视4A 65英寸</div>
+                    <div calss="pro-price">2699元</div>
+                  </a>
+                </li>
+                <li class="product">
+                  <a href target="_blank">
+                    <div calss="pro-img">
+                      <img v-lazy="'/imgs/nav-img/nav-3-6.png'" alt />
                     </div>
                     <div calss="pro-name">查看全部</div>
                     <div calss="pro-price">查看全部</div>
-                  </a>
-                </li>
-                <li class="product">
-                  <a href target="_blank">
-                    <div calss="pro-img">
-                      <img src="/imgs/nav-img/nav-3-5.jpg" alt />
-                    </div>
-                    <div calss="pro-name">小米CC9</div>
-                    <div calss="pro-price">1799元</div>
-                  </a>
-                </li>
-                <li class="product">
-                  <a href target="_blank">
-                    <div calss="pro-img">
-                      <img src="/imgs/nav-img/nav-3-6.png" alt />
-                    </div>
-                    <div calss="pro-name">小米CC9</div>
-                    <div calss="pro-price">1799元</div>
                   </a>
                 </li>
               </ul>

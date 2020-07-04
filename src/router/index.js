@@ -4,6 +4,7 @@ import Home from '../pages/home.vue'
 import Index from '../pages/index.vue'
 import Product from '../pages/product.vue'
 import Detail from '../pages/detail.vue'
+import Login from '../pages/login.vue'
 import Cart from '../pages/cart.vue'
 import Order from '../pages/order.vue'
 import OrderList from '../pages/orderList.vue'
@@ -36,6 +37,11 @@ const routes = [ // 配置一些子路由
         component: Detail
       }
     ]
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login
   },
   {
     path: '/cart',
