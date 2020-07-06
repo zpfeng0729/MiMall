@@ -190,6 +190,7 @@ export default {
         background-color: #ff6600;
         text-align: center;
         color: #ffffff;
+        margin-right: 0;
         .icon-cart {
           // display: inline-block;
           // width: 16px;

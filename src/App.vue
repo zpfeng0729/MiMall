@@ -34,9 +34,25 @@ export default {
     // })
 
     // 第三种：本地集成mockjs实现数据mock(mockjs并没有发生真实的请求)
-    this.axios.get('user/login').then((res) => {
-      this.res = res;
-    })
+    // this.axios.get('user/login').then((res) => {
+    //   this.res = res;
+    // })
+    this.getUserInfo();
+    this.getCartCount();
+  },
+  methods: {
+    // 获取用户信息
+    getUserInfo() {
+      this.axios.get('/user').then(() => {
+
+      })
+    },
+    // 获取商品购物车数量
+    getCartCount() {
+      this.axios.get('/carts/products/sum').then(() => {
+
+      })
+    }
   }
 }
 </script>
